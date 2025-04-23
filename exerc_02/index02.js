@@ -1,9 +1,9 @@
-let numeroAleatorio = Math.floor(Math.random() * 10);
+let numeroAleatorio = Math.floor((Math.random() * 10) + 1);
 let numeroTentativa = 1;
 let numeroUsuario;
 
 do {
-    numeroUsuario = parseInt(prompt(`Insira um número:  `)); 
+    numeroUsuario = parseInt(prompt(`Insira um número de 1 a 10:  `)); 
 
     if (isNaN(numeroUsuario)) {
         alert(`Você inseriu alguma informação incorreta ou os números são iguais,tente novamente`);
@@ -18,7 +18,7 @@ do {
         }
         numeroTentativa++;
     }
-    
+
 } while (numeroUsuario != numeroAleatorio && numeroTentativa <= 3);
 
 console.log(`O número sortiado era o : ${numeroAleatorio}`);
